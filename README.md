@@ -1,4 +1,4 @@
-<img width="1489" height="717" alt="image" src="https://github.com/user-attachments/assets/bd0b9936-a60e-4b45-ab9f-e0498f942630" /><h1 align="center">🔳 RISC-V SoC Tapeout Program — Week 2️⃣</h1>
+<h1 align="center">🔳 RISC-V SoC Tapeout Program — Week 2️⃣</h1>
 
 <p align="center"><img src="./ASSETS/29.png" width="500" alt="image 1"/></p>
 
@@ -798,7 +798,7 @@ cd output/post_synth_sim
 
 ```
 
-<p align="center"><img src="./ASSETS/30.png" width="600" alt="image 31"/></p>
+<p align="center"><img src="./ASSETS/31.png" width="600" alt="image 31"/></p>
 
 </details>
 

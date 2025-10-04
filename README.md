@@ -85,7 +85,7 @@ A DSP is a **specialized mini-processor** optimized for handling continuous sign
 
 ## 5. Connectivity Units
 
-<p align="center"><img src="./ASSETS/6.jpg" width="700" alt="image 6"/></p>
+<p align="center"><img src="./ASSETS/6.jpg" width="400" alt="image 6"/></p>
 
 These blocks make the device capable of communicating wirelessly or wired.
 
@@ -97,9 +97,9 @@ These blocks make the device capable of communicating wirelessly or wired.
 
 ## 6. I/O Interfaces🔌
 
-<p align="center"><img src="./ASSETS/7.gif" width="700" alt="image 7"/></p>
+<p align="center"><img src="./ASSETS/7.gif" width="500" alt="image 7"/></p>
 
-<p align="center"><img src="./ASSETS/9.jpeg" width="700" alt="image 9"/></p>
+<p align="center"><img src="./ASSETS/9.jpeg" width="500" alt="image 9"/></p>
 
 These are the **communication bridges** between the SoC and external components.
 
@@ -123,7 +123,7 @@ The PMU ensures the SoC **uses power efficiently** without overheating or draini
 
 ## 8. Security Blocks 🔐
 
-<p align="center"><img src="./ASSETS/10.jpg" width="700" alt="image 10"/></p>
+<p align="center"><img src="./ASSETS/10.jpg" width="500" alt="image 10"/></p>
 
 Security modules protect the system from unauthorized access and attacks.
 
@@ -208,7 +208,7 @@ Even though they’re powerful, SoCs come with some issues:
 
 
 
-[week2 front page](https://www.notion.so/week2-front-page-2825f99c9dcb80b1986ffb4a7e551dbc?pvs=21)
+
 
 </details>
 

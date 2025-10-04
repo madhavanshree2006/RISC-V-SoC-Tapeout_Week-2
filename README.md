@@ -671,10 +671,125 @@ where Dext = {1'b0, D}
 
 
 
+<details>
+
+<summary><h2>2️⃣RTL Synthesis</h2></summary>
+
+### 🛠️ systhesis using yosys 
+
+
+❗Before going to the synthesis part, make ensure that your in the ```VSDBabySoC``` diectory
+
+```
+maddy@Madhavan-shree:~/Desktop/open_source_tapout/VLSI/VSDBabySoC$ pwd
+/home/maddy/Desktop/open_source_tapout/VLSI/VSDBabySoC
+
+```
+
+- After that open yosys environment and flow the commands below 
+
+```
+yosys> read_verilog  -sv -I src/include/ -I src/module/ src/module/vsdbabysoc.v src/module/clk_gate.v src/module/rvmyth.v
+
+yosys> read_liberty -lib src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+yosys> read_liberty -lib src/lib/avsddac.lib
+ 
+yosys> read_liberty -lib src/lib/avsdpll.lib
+
+yosys> read_liberty -lib src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+yosys> synth -top vsdbabysoc
+
+yosys> write_verilog vsdbabysoc_synth_net.v
+
+yosys> show vsdbabysoc
+```
+
+<p align="center"><img src="./ASSETS/30.png" width="700" alt="image 30"/></p>
+
+### 📌 Synthesis Report 
+
+```
+=== clk_gate ===
+
+
+    +----------Local Count, excluding submodules.
+    |
+    5 wires
+    5 wire bits
+    5 public wires
+    5 public wire bits
+    5 ports
+    5 port bits
 
 
 
+=== rvmyth ===
 
+
+    +----------Local Count, excluding submodules.
+    |
+ 3945 wires
+ 6632 wire bits
+  269 public wires
+ 2941 public wire bits
+    3 ports
+   12 port bits
+ 5155 cells
+ 1411   $_ANDNOT_
+  174   $_AND_
+  239   $_DFF_P_
+  513   $_MUX_
+   42   $_NAND_
+   98   $_NOR_
+   49   $_NOT_
+   73   $_ORNOT_
+ 1322   $_OR_
+  962   $_SDFFE_PP0P_
+   64   $_SDFFE_PP1P_
+    8   $_SDFF_PP0_
+   71   $_XNOR_
+  129   $_XOR_
+    7 submodules
+    7   clk_gate
+
+
+
+=== vsdbabysoc ===
+
+
+    +----------Local Count, excluding submodules.
+    |
+    9 wires
+   18 wire bits
+    9 public wires
+   18 public wire bits
+    7 ports
+    7 port bits
+    2 cells
+    1   avsddac
+    1   avsdpll
+    1 submodules
+    1   rvmyth
+
+
+
+=== design hierarchy ===
+```
+
+</details>
+---
+
+<details>
+
+<summary><h2>3️⃣Post-Synthesis Simulation</h2></summary>
+
+
+
+</details>
+
+--- 
 
 👉 Main Repo Link :  
 [https://github.com/madhavanshree2006/RISC-V-SoC-Tapeout-Program](https://github.com/madhavanshree2006/RISC-V-SoC-Tapeout-Program)

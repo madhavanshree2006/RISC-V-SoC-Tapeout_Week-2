@@ -123,7 +123,7 @@ The PMU ensures the SoC **uses power efficiently** without overheating or draini
 
 ## 8. Security Blocks 🔐
 
-<p align="center"><img src="./ASSETS/10.jpg" width="500" alt="image 10"/></p>
+<p align="center"><img src="./ASSETS/10.jpg" width="600" alt="image 10"/></p>
 
 Security modules protect the system from unauthorized access and attacks.
 
@@ -135,7 +135,7 @@ Security modules protect the system from unauthorized access and attacks.
 
 ## 9. AI / Neural Processing Units (NPUs or TPUs)
 
-<p align="center"><img src="./ASSETS/11.png" width="700" alt="image 11"/></p>
+<p align="center"><img src="./ASSETS/11.png" width="600" alt="image 11"/></p>
 
 Modern SoCs often integrate dedicated AI engines.
 
@@ -147,7 +147,7 @@ Modern SoCs often integrate dedicated AI engines.
 
 ## **Why SoCs Are So Impressive🌟**
 
-<p align="center"><img src="./ASSETS/12.jpg" width="700" alt="image 12"/></p>
+<p align="center"><img src="./ASSETS/12.jpg" width="600" alt="image 12"/></p>
 
 Here’s why SoCs are game-changers:
 
@@ -161,7 +161,7 @@ Here’s why SoCs are game-changers:
 
 ## **Devices and Places Where SoCs Are Used**
 
-<p align="center"><img src="./ASSETS/13.gif" width="700" alt="image 13"/></p>
+<p align="center"><img src="./ASSETS/13.gif" width="400" alt="image 13"/></p>
 
 SoCs are everywhere! Some common use cases:
 
@@ -178,7 +178,7 @@ SoCs are everywhere! Some common use cases:
 
 ## **Well-Known SoC Examples📱**
 
-<p align="center"><img src="./ASSETS/14.png" width="700" alt="image 14"/></p>
+<p align="center"><img src="./ASSETS/14.png" width="600" alt="image 14"/></p>
 
 Here are well-known examples:
 
@@ -194,7 +194,7 @@ Here are well-known examples:
 
 ## **⚠️ Difficulties and Limitations of SoCs**
 
-<p align="center"><img src="./ASSETS/15.jpg" width="700" alt="image 15"/></p>
+<p align="center"><img src="./ASSETS/15.jpg" width="600" alt="image 15"/></p>
 
 Even though they’re powerful, SoCs come with some issues:
 
@@ -241,7 +241,7 @@ Here is a breakdown of important sub-blocks and their design challenges you migh
 
 ## **1. RVMYTH (RISC-V CPU Core) 🧠**
 
-<p align="center"><img src="./ASSETS/17.png" width="700" alt="image 17"/></p>
+<p align="center"><img src="./ASSETS/17.png" width="400" alt="image 17"/></p>
 
 ### 🔎 What is it?
 
@@ -342,11 +342,11 @@ A **DAC (Digital-to-Analog Converter)** converts binary data into continuous ana
 - Weighted Resistor DAC.
 - R-2R Ladder DAC.
 
-<p align="center"><img src="./ASSETS/20.png" width="700" alt="image 20"/></p>
+<p align="center"><img src="./ASSETS/20.png" width="500" alt="image 20"/></p>
 
 - Sigma-Delta DAC.
 
-<p align="center"><img src="./ASSETS/21.jpg" width="700" alt="image 21"/></p>
+<p align="center"><img src="./ASSETS/21.jpg" width="600" alt="image 21"/></p>
 
 ### 🎯 Why in BabySoC?
 

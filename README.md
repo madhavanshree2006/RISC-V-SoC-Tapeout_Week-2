@@ -846,6 +846,125 @@ cd output/post_synth_sim
 </details>
 
 --- 
+## 📒 Key Learnings — Week 2
 
+### 🔧 SoC Integration, Synthesis & Post-Synth Debug
+
+---
+
+### **📌** Integrating RISC-V Core with SoC Peripherals
+
+- Combined **rvmyth RISC-V core** with
+    - `avsdpll` (PLL)
+    - `avsddac` (DAC)
+    - `clk_gate` module
+- Set up proper hierarchy & module connections
+- Understood **signal interfacing** & dependency of include files (`vh`, `tlv`, `sv`)
+
+---
+
+### **📌** Library, Include & Hierarchy Fixes
+
+- Resolved missing `sp_verilog.vh` & include paths using `I`
+- Loaded timing libraries:
+    
+    ✅ `sky130_fd_sc_hd__tt_025C_1v80.lib`
+    
+    ✅ `avsddac.lib`, `avsdpll.lib`
+    
+- Fixed syntax compatibility for synthesis (`real` → unsupported in Yosys)
+
+---
+
+### **📌** Synthesizing the Complete SoC
+
+- Successfully ran:
+    
+    ```
+    read_liberty
+    read_verilog (all modules)
+    synth -top vsdbabysoc
+    
+    ```
+    
+- Performed:
+    
+    ✔ `opt_clean`, `hierarchy`, `flatten`, `check`
+    
+- Observed:
+    - 5157 total cells
+    - rvmyth auto-expanded memories to registers
+- Generated:
+    
+    ✅ `vsdbabysoc_synth_net.v`
+    
+
+---
+
+### **📌** Post-Synthesis Simulation
+
+- Compiled with:
+    
+    ```
+    iverilog -DPOST_SYNTH_SIM ...
+    
+    ```
+    
+- Testbench updated to include synthesized netlist
+- Simulated `.out` using `vvp`
+- Generated:
+    
+    ✅ `post_synth_sim.vcd`
+    
+
+---
+
+### **📌** Debugging VCD & Netlist View
+
+- GTKWave error:
+    
+    ❌ “Unknown VCD identifier”
+    
+    ➝ Result of malformed `$dumpvars` or missing timescale/signals
+    
+- Fixed by:
+    
+    ✅ Re-exporting VCD with correct dump commands
+    
+- Tried visualizing netlist using `yosys show`
+    
+    ➝ Needed selecting only the **top module**
+    
+
+---
+
+## 🛠️ Tools in Action
+
+✔ Yosys → Full SoC synthesis
+
+✔ Icarus Verilog → RTL & netlist simulation
+
+✔ GTKWave → VCD waveform debug
+
+✔ Sky130 libs → Standard cell mapping
+
+✔ Graphviz (Yosys show) → Netlist structure
+
+---
+
+> 💡 “Week 2 pushed synthesis to the SoC level — from isolated RTL to a full hierarchical build with peripherals, includes, libraries, and netlists. Faced errors, fixed them, and learned the *real* debug workflow beyond just coding!” 🚀
+>
+
+---
+## 🙏 Special Thanks 👏  
+I sincerely thank all the organizations and their key members for making this program possible 💡:  
+
+- 🧑‍🏫 **VLSI System Design (VSD)** – [Kunal Ghosh](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/) for mentorship and vision.  
+- 🤝 **Efabless** – [Michael Wishart](https://www.linkedin.com/in/mike-wishart-81480612/) & [Mohamed Kassem](https://www.linkedin.com/in/mkkassem/) for enabling collaborative open-source chip design.  
+- 🏭 **[Semiconductor Laboratory (SCL)](https://www.scl.gov.in/)** – for PDK & foundry support.  
+- 🎓 **[IIT Gandhinagar (IITGN)](https://www.linkedin.com/school/indian-institute-of-technology-gandhinagar-iitgn-/?originalSubdomain=in)** – for on-site training & project facilitation.  
+- 🛠️ **Synopsys** – [Sassine Ghazi](https://www.linkedin.com/in/sassine-ghazi/) for providing industry-grade EDA tools under C2S program.  
+
+--- 
 👉 Main Repo Link :  
 [https://github.com/madhavanshree2006/RISC-V-SoC-Tapeout-Program](https://github.com/madhavanshree2006/RISC-V-SoC-Tapeout-Program)

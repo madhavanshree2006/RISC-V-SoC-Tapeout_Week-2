@@ -479,7 +479,50 @@ The **AMS interface** isolates sensitive analog blocks (DAC, PLL) from digital s
 --- 
 # Project Structure
 
-ASSETS
+```
+RISC-V-SoC-Tapeout_Week-2
+├── ASSETS
+├── gls_model
+│   ├── primitives.v
+│   └── sky130_fd_sc_hd.v
+├── include
+│   ├── sandpiper.vh
+│   ├── sandpiper_gen.vh
+│   ├── sp_default.vh
+│   └── sp_verilog.vh
+├── lef
+│   ├── avsddac.lef
+│   └── avsdpll.lef
+├── lib
+│   ├── avsddac.lib
+│   ├── avsdpll.lib
+│   └── sky130_fd_sc_hd__tt_025C_1v80.lib
+├── module
+│   ├── avsddac.v
+│   ├── avsdpll.v
+│   ├── clk_gate.v
+│   ├── primitives.v
+│   ├── pseudo_rand.sv
+│   ├── pseudo_rand_gen.sv
+│   ├── rvmyth.tlv
+│   ├── rvmyth.v
+│   ├── rvmyth_gen.v
+│   ├── sky130_fd_sc_hd.v
+│   ├── testbench.rvmyth.post-routing.v
+│   ├── testbench.v
+│   ├── vsdbabysoc.synth.v
+│   └── vsdbabysoc.v
+├── output
+│   ├── post_synth_sim
+│   │   ├── post_synth_sim.out
+│   │   └── post_synth_sim.vcd
+│   └── pre_synth_sim
+│       ├── pre_synth_sim.out
+│       └── pre_synth_sim.vcd
+├── LICENSE
+└── README.md
+
+```
 
 # project Cloning 
 

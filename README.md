@@ -1,4 +1,4 @@
-<h1 align="center">🔳 RISC-V SoC Tapeout Program — Week 2️⃣</h1>
+<img width="1489" height="717" alt="image" src="https://github.com/user-attachments/assets/bd0b9936-a60e-4b45-ab9f-e0498f942630" /><h1 align="center">🔳 RISC-V SoC Tapeout Program — Week 2️⃣</h1>
 
 <p align="center"><img src="./ASSETS/29.png" width="500" alt="image 1"/></p>
 
@@ -469,7 +469,7 @@ The **AMS interface** isolates sensitive analog blocks (DAC, PLL) from digital s
 
 ---
 
-## Design Flow & Physical Implementation
+## Design follow & Physical Implementation
 
 <p align="center"><img src="./ASSETS/24.png" width="700" alt="image 24"/></p>
 
@@ -587,7 +587,7 @@ ls
 <p align="center"><img src="./ASSETS/27.png" width="700" alt="image 27"/></p>
 <br><br>
 
-👉 Then to produce ```.vcd``` file and to see the waveform in ```Gtkwave``` flow the commands
+👉 Then to produce ```.vcd``` file and to see the waveform in ```Gtkwave``` follow the commands
 ```
 ./pre_synth_sim.out
 
@@ -686,7 +686,7 @@ maddy@Madhavan-shree:~/Desktop/open_source_tapout/VLSI/VSDBabySoC$ pwd
 
 ```
 
-- After that open yosys environment and flow the commands below 
+- After that open yosys environment and follow the commands below 
 
 ```
 yosys> read_verilog  -sv -I src/include/ -I src/module/ src/module/vsdbabysoc.v src/module/clk_gate.v src/module/rvmyth.v
@@ -785,7 +785,20 @@ yosys> show vsdbabysoc
 
 <summary><h2>3️⃣Post-Synthesis Simulation</h2></summary>
 
+❗Before going to the Post-Synthesis Simulation part, make ensure that your in the ```VSDBabySoC``` diectory
 
+- follow the commads below
+
+```
+iverilog -o output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM  -I src/include/ -I src/module/ src/module/testbench.v
+
+cd output/post_synth_sim
+
+ gtkwave post_synth_sim.out
+
+```
+
+<p align="center"><img src="./ASSETS/30.png" width="600" alt="image 31"/></p>
 
 </details>
 

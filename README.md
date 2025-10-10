@@ -619,7 +619,7 @@ VSDBabySoC
 👉 Use the following command to launch the pre-synthesis simulation:
 
 ```bash
-iverilog -o output/pre_synth_sim/pre_synth_sim.out   -DPRE_SYNTH_SIM   -I src/include   -I src/module   src/module/testbench.v
+iverilog -o output/pre_synth_sim/pre_synth_sim.out -DPRE_SYNTH_SIM -I src/include -I src/module src/module/testbench.v
 
 cd output/pre_synth_sim
 
